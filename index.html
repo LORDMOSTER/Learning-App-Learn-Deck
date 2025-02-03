@@ -1,0 +1,218 @@
+<html>
+ <head>
+  <title>
+   LearnDeck - Flashcard Learning App
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link rel="icon" href="Images/WhatsApp Image 2025-01-30 at 19.55.46_8f349693.jpg" type="imagex/icon">
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-100">
+  <header class="bg-blue-600 text-white p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-2xl font-bold">
+     <i class="fas fa-book-reader"></i> LearnDeck
+    </h1>
+    <nav>
+     <ul class="flex space-x-4">
+      <li>
+       <a class="hover:underline" href="#">
+        <i class="fas fa-home"></i> Home
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        <i class="fas fa-cogs"></i> Features
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        <i class="fas fa-tachometer-alt"></i> Dashboard
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        <i class="fas fa-users"></i> Community
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        <i class="fas fa-user"></i> Profile
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <main class="container mx-auto p-4">
+   <!-- Flashcard Creation Tools -->
+   <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+    <h2 class="text-xl font-bold mb-4">
+     <i class="fas fa-plus-circle"></i> Create Flashcards
+    </h2>
+    <form class="space-y-4">
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="flashcard-subject">
+       Subject
+      </label>
+      <select class="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="flashcard-subject">
+       <option>
+        Mathematics
+       </option>
+       <option>
+        Science
+       </option>
+       <option>
+        History
+       </option>
+       <option>
+        Language Arts
+       </option>
+       <option>
+        Geography
+       </option>
+      </select>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="flashcard-text">
+       Text
+      </label>
+      <textarea class="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="flashcard-text" rows="3"></textarea>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="flashcard-image">
+       Image
+      </label>
+      <input class="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="flashcard-image" type="file"/>
+     </div>
+     <button class="bg-blue-600 text-white px-4 py-2 rounded-md" type="submit">
+      <i class="fas fa-check"></i> Create Flashcard
+     </button>
+    </form>
+   </section>
+   <!-- Spaced Repetition Integration -->
+   <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+    <h2 class="text-xl font-bold mb-4">
+     <i class="fas fa-sync-alt"></i> Spaced Repetition
+    </h2>
+    <p>
+     Optimize your learning with our spaced repetition algorithm. Review flashcards at the right intervals to maximize retention.
+    </p>
+   </section>
+   <!-- Progress Tracking Dashboard -->
+   <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+    <h2 class="text-xl font-bold mb-4">
+     <i class="fas fa-chart-line"></i> Progress Dashboard
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+     <div class="bg-gray-100 p-4 rounded-lg flex flex-col items-center">
+      <h3 class="text-lg font-bold mb-2">
+       Overall Progress
+      </h3>
+      <p class="text-center mb-4">
+       Track your overall progress and see how much you've learned.
+      </p>
+      <img alt="Graph showing overall learning progress" class="w-full h-auto" src="https://storage.googleapis.com/a1aa/image/b0wbvlc0uNudycD7f4mE0-TjfaC7RcLU04Kv2WxFFCI.jpg"/>
+     </div>
+     <div class="bg-gray-100 p-4 rounded-lg flex flex-col items-center">
+      <h3 class="text-lg font-bold mb-2">
+       Daily Activity
+      </h3>
+      <p class="text-center mb-4">
+       Monitor your daily study activity and stay consistent.
+      </p>
+      <img alt="Graph showing daily study activity" class="w-full h-auto" src="https://storage.googleapis.com/a1aa/image/3ZS4gMn1NBv1Le7wvMGYjQzlU9Ac5yeFH245ZTZXjh4.jpg"/>
+     </div>
+    </div>
+   </section>
+   <!-- Collaborative Features -->
+   <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+    <h2 class="text-xl font-bold mb-4">
+     <i class="fas fa-users"></i> Collaborative Features
+    </h2>
+    <p>
+     Share your flashcard sets with friends and study together. Collaborate on creating the best flashcards.
+    </p>
+    <button class="bg-blue-600 text-white px-4 py-2 rounded-md">
+     <i class="fas fa-share-alt"></i> Share Flashcard Set
+    </button>
+   </section>
+   <!-- Gamification Elements -->
+   <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+    <h2 class="text-xl font-bold mb-4">
+     <i class="fas fa-trophy"></i> Achievements &amp; Leaderboards
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+     <div class="bg-gray-100 p-4 rounded-lg flex flex-col items-center">
+      <h3 class="text-lg font-bold mb-2">
+       Achievements
+      </h3>
+      <p class="text-center mb-4">
+       Earn achievements as you progress through your learning journey.
+      </p>
+      <img alt="Icons representing various achievements" class="w-full h-auto" src="https://storage.googleapis.com/a1aa/image/TbDPfFDkU-C7CrCkOFWV90-RWG5H5wml_ozFc16SMBY.jpg"/>
+     </div>
+     <div class="bg-gray-100 p-4 rounded-lg flex flex-col items-center">
+      <h3 class="text-lg font-bold mb-2">
+       Leaderboards
+      </h3>
+      <p class="text-center mb-4">
+       Compete with others and see where you stand on the leaderboards.
+      </p>
+      <img alt="Leaderboard showing top learners" class="w-full h-auto" src="Images/home.jpg"/>
+     </div>
+    </div>
+   </section>
+   <!-- Community Forum -->
+   <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+    <h2 class="text-xl font-bold mb-4">
+     <i class="fas fa-comments"></i> Community Forum
+    </h2>
+    <p>
+     Join the community forum to discuss and get support from other users.
+    </p>
+    <button class="bg-blue-600 text-white px-4 py-2 rounded-md">
+     <i class="fas fa-comments"></i> Visit Forum
+    </button>
+   </section>
+   <!-- Take Quiz -->
+   <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+    <h2 class="text-xl font-bold mb-4">
+     <i class="fas fa-question-circle"></i> Take Quiz
+    </h2>
+    <p>
+     Test your knowledge by taking quizzes based on your flashcards.
+    </p>
+    <button class="bg-blue-600 text-white px-4 py-2 rounded-md">
+     <i class="fas fa-play-circle"></i> Start Quiz
+    </button>
+   </section>
+   <!-- Friends -->
+   <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+    <h2 class="text-xl font-bold mb-4">
+     <i class="fas fa-user-friends"></i> Friends
+    </h2>
+    <p>
+     Connect with friends and see their progress. Study together and motivate each other.
+    </p>
+    <button class="bg-blue-600 text-white px-4 py-2 rounded-md">
+     <i class="fas fa-user-plus"></i> Add Friends
+    </button>
+   </section>
+  </main>
+  <footer class="bg-blue-600 text-white p-4 mt-6">
+   <div class="container mx-auto text-center">
+    <p>
+     © 2025 LearnDeck. All rights reserved.
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>

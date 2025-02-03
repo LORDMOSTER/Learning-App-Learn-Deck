@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Flashcard Learning App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/WhatsApp Image 2025-01-30 at 19.55.46_8f349693.jpg" type="imagex/icon">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            background-color: #f0f0f0; /* Fallback background color */
+        }
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Send the video behind the content */
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 90%; /* Adjusted width for better responsiveness */
+            max-width: 400px; /* Maximum width */
+            text-align: center;
+            position: relative;
+            z-index: 1; /* Bring the login container above the video */
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<video autoplay muted loop class="video-background">
+    <source src="Images/73007-545277076.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <div class="error" id="errorMessage"></div>
+    </form>
+</div>
+
+<script>
+    const validUsers = {
+        "Sowmiya": "pass",
+        "Subasri": "pass",
+        "Sunmathi": "pass",
+        "Mithra": "pass",
+        "Monisha": "pass"
+    };
+
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const errorMessage = document.getElementById('errorMessage');
+
+        if (validUsers[username] && validUsers[username] === password) {
+            // Redirect to the home page
+            window.location.href = 'index.html';
+        } else {
+            errorMessage.textContent = "Invalid username or password.";
+        }
+    });
+</script>
+
+</body>
+</html>
